@@ -13,8 +13,9 @@
     set_include_path(implode(PATH_SEPARATOR, array(
         get_include_path(),
         'D:\_www\home\markiros\www\library',
-        //'D:\_www\home\markiros\www\library',
         'D:\_www\usr\local\library\Zend\library',
+        'C:\_www\home\markiros\www\library',
+        //'D:\_www\home\markiros\www\library',
         //'/ebsmnt/web/library',
         //'/ebsmnt/web/library/Zend/library',
         //'/web/library/Zend/library',
