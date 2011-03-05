@@ -12,7 +12,7 @@
         <!-- смотрим лишь на следующие директории -->
         <whitelist>
             <directory suffix=".php">../application</directory>
-            <directory suffix=".php">../application/library</directory>
+            <!-- <directory suffix=".php">../library</directory> -->
             <exclude>
                 <directory suffix=".phtml">../application</directory>
                 <file>../application/Bootstrap.php</file>
