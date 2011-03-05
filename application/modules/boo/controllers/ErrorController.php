@@ -27,14 +27,16 @@ class Boo_ErrorController extends Zend_Controller_Action
         }
 
         // conditionally display exceptions
+        //$this->_helper->layout->disableLayout();
         if ($this->getInvokeArg('displayExceptions') == true) {
             $this->view->exception = $errors->exception;
-            $this->_helper->layout->setLayout('layout-error');
-        } else {
-            $this->_helper->layout->setLayout('layout-error-404');
+            $this->render('error');
+        }
+        else {
+            $this->render('error-404');
         }
 
-        $this->view->request   = $errors->request;
+        $this->view->request = $errors->request;
     }
 
     public function getLog()
