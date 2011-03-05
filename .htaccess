@@ -1,0 +1,13 @@
+php_flag display_errors On
+php_flag log_errors On
+php_value error_log "data/logs/php_errors.log"
+
+AddDefaultCharset utf-8
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [NC,L]
+RewriteRule ^.*$ index.php [NC,L]
